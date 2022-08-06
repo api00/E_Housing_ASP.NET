@@ -1,0 +1,12 @@
+D:\.NET\FINAL\BLL\bin\Debug\BLL.dll
+D:\.NET\FINAL\BLL\bin\Debug\BLL.pdb
+D:\.NET\FINAL\BLL\bin\Debug\DAL.dll
+D:\.NET\FINAL\BLL\bin\Debug\EntityFramework.dll
+D:\.NET\FINAL\BLL\bin\Debug\DAL.pdb
+D:\.NET\FINAL\BLL\bin\Debug\DAL.dll.config
+D:\.NET\FINAL\BLL\bin\Debug\EntityFramework.xml
+D:\.NET\FINAL\BLL\obj\Debug\BLL.csproj.AssemblyReference.cache
+D:\.NET\FINAL\BLL\obj\Debug\BLL.csproj.CoreCompileInputs.cache
+D:\.NET\FINAL\BLL\obj\Debug\BLL.csproj.CopyComplete
+D:\.NET\FINAL\BLL\obj\Debug\BLL.dll
+D:\.NET\FINAL\BLL\obj\Debug\BLL.pdb

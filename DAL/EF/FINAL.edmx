@@ -1,0 +1,764 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+      <Schema Namespace="FINALModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2008" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+        <EntityType Name="a_profile">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="a_id" Type="int" />
+          <Property Name="a_name" Type="varchar" MaxLength="50" Nullable="false" />
+          <Property Name="a_address" Type="varchar" MaxLength="50" />
+          <Property Name="a_img" Type="varchar" MaxLength="50" />
+          <Property Name="a_email" Type="varchar" MaxLength="50" Nullable="false" />
+          <Property Name="a_num" Type="varchar" MaxLength="50" />
+          <Property Name="country" Type="varchar" MaxLength="50" />
+          <Property Name="gender" Type="varchar" MaxLength="50" />
+          <Property Name="dob" Type="varchar" MaxLength="50" />
+          <Property Name="a_address1" Type="varchar" MaxLength="50" />
+          <Property Name="zip" Type="varchar" MaxLength="50" />
+          <Property Name="fb_url" Type="varchar" MaxLength="50" />
+        </EntityType>
+        <EntityType Name="adv_details">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="user_id" Type="int" />
+          <Property Name="details" Type="varchar" MaxLength="70" />
+          <Property Name="img" Type="nchar" MaxLength="10" />
+          <Property Name="price" Type="int" />
+          <Property Name="area" Type="varchar" MaxLength="50" />
+          <Property Name="country" Type="varchar" MaxLength="50" />
+          <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+        </EntityType>
+        <EntityType Name="b_profile">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="b_id" Type="int" Nullable="false" />
+          <Property Name="b_name" Type="varchar" MaxLength="50" Nullable="false" />
+          <Property Name="b_address" Type="varchar" MaxLength="50" />
+          <Property Name="b_img" Type="varchar" MaxLength="50" />
+          <Property Name="b_email" Type="varchar" MaxLength="50" Nullable="false" />
+          <Property Name="b_num" Type="varchar" MaxLength="50" />
+          <Property Name="country" Type="varchar" MaxLength="50" />
+          <Property Name="gender" Type="varchar" MaxLength="50" />
+          <Property Name="dob" Type="varchar" MaxLength="50" />
+          <Property Name="a_address1" Type="varchar" MaxLength="50" />
+          <Property Name="zip" Type="varchar" MaxLength="50" />
+          <Property Name="fb_url" Type="varchar" MaxLength="50" />
+        </EntityType>
+        <EntityType Name="blog">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="a_id" Type="int" Nullable="false" />
+          <Property Name="img" Type="varchar" MaxLength="50" />
+          <Property Name="title" Type="varchar" MaxLength="50" />
+          <Property Name="date" Type="varchar" MaxLength="50" />
+          <Property Name="details" Type="varchar(max)" />
+        </EntityType>
+        <EntityType Name="c_rating">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="int" Nullable="false" />
+          <Property Name="ap_id" Type="int" />
+          <Property Name="comment" Type="varchar(max)" Nullable="false" />
+          <Property Name="rating" Type="int" Nullable="false" />
+          <Property Name="b_name" Type="varchar" MaxLength="50" Nullable="false" />
+        </EntityType>
+        <EntityType Name="complain">
+          <Key>
+            <PropertyRef Name="c_id" />
+          </Key>
+          <Property Name="c_subject" Type="varchar" MaxLength="50" />
+          <Property Name="c_type" Type="varchar" MaxLength="50" />
+          <Property Name="ctg" Type="varchar" MaxLength="50" />
+          <Property Name="c_details" Type="varchar(max)" />
+          <Property Name="c_id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+        </EntityType>
+        <EntityType Name="s_appartment_details">
+          <Key>
+            <PropertyRef Name="a_id" />
+          </Key>
+          <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="a_size" Type="int" Nullable="false" />
+          <Property Name="s_id" Type="int" />
+          <Property Name="s_name" Type="varchar" MaxLength="50" Nullable="false" />
+          <Property Name="location" Type="varchar" MaxLength="50" Nullable="false" />
+          <Property Name="s_nid" Type="int" Nullable="false" />
+          <Property Name="s_email" Type="varchar" MaxLength="50" Nullable="false" />
+          <Property Name="s_num" Type="varchar" MaxLength="50" Nullable="false" />
+          <Property Name="s_address" Type="varchar" MaxLength="50" Nullable="false" />
+          <Property Name="h_register_n" Type="varchar" MaxLength="50" Nullable="false" />
+          <Property Name="price" Type="int" Nullable="false" />
+          <Property Name="a_id" Type="int" Nullable="false" />
+          <Property Name="img" Type="varchar" MaxLength="50" Nullable="false" />
+          <Property Name="bed" Type="int" Nullable="false" />
+          <Property Name="bath" Type="int" Nullable="false" />
+          <Property Name="country" Type="varchar" MaxLength="50" />
+          <Property Name="a_title" Type="varchar" MaxLength="50" />
+        </EntityType>
+        <EntityType Name="s_profile">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="s_id" Type="int" Nullable="false" />
+          <Property Name="s_name" Type="varchar" MaxLength="50" Nullable="false" />
+          <Property Name="s_address" Type="varchar" MaxLength="50" />
+          <Property Name="s_img" Type="varchar" MaxLength="50" />
+          <Property Name="s_email" Type="varchar" MaxLength="50" Nullable="false" />
+          <Property Name="s_num" Type="varchar" MaxLength="50" />
+          <Property Name="country" Type="varchar" MaxLength="50" />
+          <Property Name="gender" Type="varchar" MaxLength="50" />
+          <Property Name="dob" Type="varchar" MaxLength="50" />
+          <Property Name="a_address1" Type="varchar" MaxLength="50" />
+          <Property Name="zip" Type="varchar" MaxLength="50" />
+          <Property Name="fb_url" Type="varchar" MaxLength="50" />
+        </EntityType>
+        <EntityType Name="t_profile">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="t_id" Type="int" Nullable="false" />
+          <Property Name="t_name" Type="varchar" MaxLength="50" Nullable="false" />
+          <Property Name="t_address" Type="varchar" MaxLength="50" />
+          <Property Name="t_email" Type="varchar" MaxLength="50" Nullable="false" />
+          <Property Name="t_img" Type="varchar" MaxLength="50" />
+          <Property Name="t_num" Type="varchar" MaxLength="50" />
+        </EntityType>
+        <EntityType Name="trans_details_sb">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="s_id" Type="int" />
+          <Property Name="ap_id" Type="int" />
+          <Property Name="b_id" Type="int" Nullable="false" />
+          <Property Name="amount" Type="int" Nullable="false" />
+          <Property Name="t_id" Type="int" />
+        </EntityType>
+        <EntityType Name="user_details">
+          <Key>
+            <PropertyRef Name="user_id" />
+          </Key>
+          <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="name" Type="varchar" MaxLength="50" Nullable="false" />
+          <Property Name="email" Type="varchar" MaxLength="50" Nullable="false" />
+          <Property Name="user_id" Type="int" Nullable="false" />
+          <Property Name="password" Type="varchar" MaxLength="50" Nullable="false" />
+          <Property Name="rules" Type="varchar" MaxLength="50" Nullable="false" />
+          <Property Name="status" Type="varchar" MaxLength="50" />
+          <Property Name="img" Type="varchar" MaxLength="50" />
+        </EntityType>
+        <Association Name="FK_a_profile_user_details">
+          <End Role="user_details" Type="Self.user_details" Multiplicity="0..1">
+            <OnDelete Action="Cascade" />
+          </End>
+          <End Role="a_profile" Type="Self.a_profile" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="user_details">
+              <PropertyRef Name="user_id" />
+            </Principal>
+            <Dependent Role="a_profile">
+              <PropertyRef Name="a_id" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_b_profile_user_details">
+          <End Role="user_details" Type="Self.user_details" Multiplicity="1">
+            <OnDelete Action="Cascade" />
+          </End>
+          <End Role="b_profile" Type="Self.b_profile" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="user_details">
+              <PropertyRef Name="user_id" />
+            </Principal>
+            <Dependent Role="b_profile">
+              <PropertyRef Name="b_id" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_c_rating_s_appartment_details">
+          <End Role="s_appartment_details" Type="Self.s_appartment_details" Multiplicity="0..1" />
+          <End Role="c_rating" Type="Self.c_rating" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="s_appartment_details">
+              <PropertyRef Name="a_id" />
+            </Principal>
+            <Dependent Role="c_rating">
+              <PropertyRef Name="ap_id" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_s_profile_user_details">
+          <End Role="user_details" Type="Self.user_details" Multiplicity="1">
+            <OnDelete Action="Cascade" />
+          </End>
+          <End Role="s_profile" Type="Self.s_profile" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="user_details">
+              <PropertyRef Name="user_id" />
+            </Principal>
+            <Dependent Role="s_profile">
+              <PropertyRef Name="s_id" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_t_profile_user_details">
+          <End Role="user_details" Type="Self.user_details" Multiplicity="1">
+            <OnDelete Action="Cascade" />
+          </End>
+          <End Role="t_profile" Type="Self.t_profile" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="user_details">
+              <PropertyRef Name="user_id" />
+            </Principal>
+            <Dependent Role="t_profile">
+              <PropertyRef Name="t_id" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_trans_details_sb_s_appartment_details">
+          <End Role="s_appartment_details" Type="Self.s_appartment_details" Multiplicity="0..1" />
+          <End Role="trans_details_sb" Type="Self.trans_details_sb" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="s_appartment_details">
+              <PropertyRef Name="a_id" />
+            </Principal>
+            <Dependent Role="trans_details_sb">
+              <PropertyRef Name="ap_id" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <EntityContainer Name="FINALModelStoreContainer">
+          <EntitySet Name="a_profile" EntityType="Self.a_profile" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="adv_details" EntityType="Self.adv_details" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="b_profile" EntityType="Self.b_profile" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="blog" EntityType="Self.blog" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="c_rating" EntityType="Self.c_rating" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="complain" EntityType="Self.complain" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="s_appartment_details" EntityType="Self.s_appartment_details" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="s_profile" EntityType="Self.s_profile" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="t_profile" EntityType="Self.t_profile" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="trans_details_sb" EntityType="Self.trans_details_sb" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="user_details" EntityType="Self.user_details" Schema="dbo" store:Type="Tables" />
+          <AssociationSet Name="FK_a_profile_user_details" Association="Self.FK_a_profile_user_details">
+            <End Role="user_details" EntitySet="user_details" />
+            <End Role="a_profile" EntitySet="a_profile" />
+          </AssociationSet>
+          <AssociationSet Name="FK_b_profile_user_details" Association="Self.FK_b_profile_user_details">
+            <End Role="user_details" EntitySet="user_details" />
+            <End Role="b_profile" EntitySet="b_profile" />
+          </AssociationSet>
+          <AssociationSet Name="FK_c_rating_s_appartment_details" Association="Self.FK_c_rating_s_appartment_details">
+            <End Role="s_appartment_details" EntitySet="s_appartment_details" />
+            <End Role="c_rating" EntitySet="c_rating" />
+          </AssociationSet>
+          <AssociationSet Name="FK_s_profile_user_details" Association="Self.FK_s_profile_user_details">
+            <End Role="user_details" EntitySet="user_details" />
+            <End Role="s_profile" EntitySet="s_profile" />
+          </AssociationSet>
+          <AssociationSet Name="FK_t_profile_user_details" Association="Self.FK_t_profile_user_details">
+            <End Role="user_details" EntitySet="user_details" />
+            <End Role="t_profile" EntitySet="t_profile" />
+          </AssociationSet>
+          <AssociationSet Name="FK_trans_details_sb_s_appartment_details" Association="Self.FK_trans_details_sb_s_appartment_details">
+            <End Role="s_appartment_details" EntitySet="s_appartment_details" />
+            <End Role="trans_details_sb" EntitySet="trans_details_sb" />
+          </AssociationSet>
+        </EntityContainer>
+      </Schema>
+    </edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema Namespace="FINALModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+        <EntityType Name="a_profile">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="a_id" Type="Int32" />
+          <Property Name="a_name" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="a_address" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="a_img" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="a_email" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="a_num" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="country" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="gender" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="dob" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="a_address1" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="zip" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="fb_url" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <NavigationProperty Name="user_details" Relationship="Self.FK_a_profile_user_details" FromRole="a_profile" ToRole="user_details" />
+        </EntityType>
+        <EntityType Name="adv_details">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="user_id" Type="Int32" />
+          <Property Name="details" Type="String" MaxLength="70" FixedLength="false" Unicode="false" />
+          <Property Name="img" Type="String" MaxLength="10" FixedLength="true" Unicode="true" />
+          <Property Name="price" Type="Int32" />
+          <Property Name="area" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="country" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+        </EntityType>
+        <EntityType Name="b_profile">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="b_id" Type="Int32" Nullable="false" />
+          <Property Name="b_name" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="b_address" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="b_img" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="b_email" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="b_num" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="country" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="gender" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="dob" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="a_address1" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="zip" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="fb_url" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <NavigationProperty Name="user_details" Relationship="Self.FK_b_profile_user_details" FromRole="b_profile" ToRole="user_details" />
+        </EntityType>
+        <EntityType Name="blog">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="a_id" Type="Int32" Nullable="false" />
+          <Property Name="img" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="title" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="date" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="details" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+        </EntityType>
+        <EntityType Name="c_rating">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="Int32" Nullable="false" />
+          <Property Name="ap_id" Type="Int32" />
+          <Property Name="comment" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="rating" Type="Int32" Nullable="false" />
+          <Property Name="b_name" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+          <NavigationProperty Name="s_appartment_details" Relationship="Self.FK_c_rating_s_appartment_details" FromRole="c_rating" ToRole="s_appartment_details" />
+        </EntityType>
+        <EntityType Name="complain">
+          <Key>
+            <PropertyRef Name="c_id" />
+          </Key>
+          <Property Name="c_subject" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="c_type" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="ctg" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="c_details" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+          <Property Name="c_id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+        </EntityType>
+        <EntityType Name="s_appartment_details">
+          <Key>
+            <PropertyRef Name="a_id" />
+          </Key>
+          <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="a_size" Type="Int32" Nullable="false" />
+          <Property Name="s_id" Type="Int32" />
+          <Property Name="s_name" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="location" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="s_nid" Type="Int32" Nullable="false" />
+          <Property Name="s_email" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="s_num" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="s_address" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="h_register_n" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="price" Type="Int32" Nullable="false" />
+          <Property Name="a_id" Type="Int32" Nullable="false" />
+          <Property Name="img" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="bed" Type="Int32" Nullable="false" />
+          <Property Name="bath" Type="Int32" Nullable="false" />
+          <Property Name="country" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="a_title" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <NavigationProperty Name="c_rating" Relationship="Self.FK_c_rating_s_appartment_details" FromRole="s_appartment_details" ToRole="c_rating" />
+          <NavigationProperty Name="trans_details_sb" Relationship="Self.FK_trans_details_sb_s_appartment_details" FromRole="s_appartment_details" ToRole="trans_details_sb" />
+        </EntityType>
+        <EntityType Name="s_profile">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="s_id" Type="Int32" Nullable="false" />
+          <Property Name="s_name" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="s_address" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="s_img" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="s_email" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="s_num" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="country" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="gender" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="dob" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="a_address1" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="zip" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="fb_url" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <NavigationProperty Name="user_details" Relationship="Self.FK_s_profile_user_details" FromRole="s_profile" ToRole="user_details" />
+        </EntityType>
+        <EntityType Name="t_profile">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="t_id" Type="Int32" Nullable="false" />
+          <Property Name="t_name" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="t_address" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="t_email" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="t_img" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="t_num" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <NavigationProperty Name="user_details" Relationship="Self.FK_t_profile_user_details" FromRole="t_profile" ToRole="user_details" />
+        </EntityType>
+        <EntityType Name="trans_details_sb">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="s_id" Type="Int32" />
+          <Property Name="ap_id" Type="Int32" />
+          <Property Name="b_id" Type="Int32" Nullable="false" />
+          <Property Name="amount" Type="Int32" Nullable="false" />
+          <Property Name="t_id" Type="Int32" />
+          <NavigationProperty Name="s_appartment_details" Relationship="Self.FK_trans_details_sb_s_appartment_details" FromRole="trans_details_sb" ToRole="s_appartment_details" />
+        </EntityType>
+        <EntityType Name="user_details">
+          <Key>
+            <PropertyRef Name="user_id" />
+          </Key>
+          <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="name" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="email" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="user_id" Type="Int32" Nullable="false" />
+          <Property Name="password" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="rules" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="status" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="img" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <NavigationProperty Name="a_profile" Relationship="Self.FK_a_profile_user_details" FromRole="user_details" ToRole="a_profile" />
+          <NavigationProperty Name="b_profile" Relationship="Self.FK_b_profile_user_details" FromRole="user_details" ToRole="b_profile" />
+          <NavigationProperty Name="s_profile" Relationship="Self.FK_s_profile_user_details" FromRole="user_details" ToRole="s_profile" />
+          <NavigationProperty Name="t_profile" Relationship="Self.FK_t_profile_user_details" FromRole="user_details" ToRole="t_profile" />
+        </EntityType>
+        <Association Name="FK_a_profile_user_details">
+          <End Role="user_details" Type="Self.user_details" Multiplicity="0..1">
+            <OnDelete Action="Cascade" />
+          </End>
+          <End Role="a_profile" Type="Self.a_profile" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="user_details">
+              <PropertyRef Name="user_id" />
+            </Principal>
+            <Dependent Role="a_profile">
+              <PropertyRef Name="a_id" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_b_profile_user_details">
+          <End Role="user_details" Type="Self.user_details" Multiplicity="1">
+            <OnDelete Action="Cascade" />
+          </End>
+          <End Role="b_profile" Type="Self.b_profile" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="user_details">
+              <PropertyRef Name="user_id" />
+            </Principal>
+            <Dependent Role="b_profile">
+              <PropertyRef Name="b_id" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_c_rating_s_appartment_details">
+          <End Role="s_appartment_details" Type="Self.s_appartment_details" Multiplicity="0..1" />
+          <End Role="c_rating" Type="Self.c_rating" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="s_appartment_details">
+              <PropertyRef Name="a_id" />
+            </Principal>
+            <Dependent Role="c_rating">
+              <PropertyRef Name="ap_id" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_trans_details_sb_s_appartment_details">
+          <End Role="s_appartment_details" Type="Self.s_appartment_details" Multiplicity="0..1" />
+          <End Role="trans_details_sb" Type="Self.trans_details_sb" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="s_appartment_details">
+              <PropertyRef Name="a_id" />
+            </Principal>
+            <Dependent Role="trans_details_sb">
+              <PropertyRef Name="ap_id" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_s_profile_user_details">
+          <End Role="user_details" Type="Self.user_details" Multiplicity="1">
+            <OnDelete Action="Cascade" />
+          </End>
+          <End Role="s_profile" Type="Self.s_profile" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="user_details">
+              <PropertyRef Name="user_id" />
+            </Principal>
+            <Dependent Role="s_profile">
+              <PropertyRef Name="s_id" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_t_profile_user_details">
+          <End Role="user_details" Type="Self.user_details" Multiplicity="1">
+            <OnDelete Action="Cascade" />
+          </End>
+          <End Role="t_profile" Type="Self.t_profile" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="user_details">
+              <PropertyRef Name="user_id" />
+            </Principal>
+            <Dependent Role="t_profile">
+              <PropertyRef Name="t_id" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <EntityContainer Name="FINALEntities" annotation:LazyLoadingEnabled="true">
+          <EntitySet Name="a_profile" EntityType="Self.a_profile" />
+          <EntitySet Name="adv_details" EntityType="Self.adv_details" />
+          <EntitySet Name="b_profile" EntityType="Self.b_profile" />
+          <EntitySet Name="blogs" EntityType="Self.blog" />
+          <EntitySet Name="c_rating" EntityType="Self.c_rating" />
+          <EntitySet Name="complains" EntityType="Self.complain" />
+          <EntitySet Name="s_appartment_details" EntityType="Self.s_appartment_details" />
+          <EntitySet Name="s_profile" EntityType="Self.s_profile" />
+          <EntitySet Name="t_profile" EntityType="Self.t_profile" />
+          <EntitySet Name="trans_details_sb" EntityType="Self.trans_details_sb" />
+          <EntitySet Name="user_details" EntityType="Self.user_details" />
+          <AssociationSet Name="FK_a_profile_user_details" Association="Self.FK_a_profile_user_details">
+            <End Role="user_details" EntitySet="user_details" />
+            <End Role="a_profile" EntitySet="a_profile" />
+          </AssociationSet>
+          <AssociationSet Name="FK_b_profile_user_details" Association="Self.FK_b_profile_user_details">
+            <End Role="user_details" EntitySet="user_details" />
+            <End Role="b_profile" EntitySet="b_profile" />
+          </AssociationSet>
+          <AssociationSet Name="FK_c_rating_s_appartment_details" Association="Self.FK_c_rating_s_appartment_details">
+            <End Role="s_appartment_details" EntitySet="s_appartment_details" />
+            <End Role="c_rating" EntitySet="c_rating" />
+          </AssociationSet>
+          <AssociationSet Name="FK_trans_details_sb_s_appartment_details" Association="Self.FK_trans_details_sb_s_appartment_details">
+            <End Role="s_appartment_details" EntitySet="s_appartment_details" />
+            <End Role="trans_details_sb" EntitySet="trans_details_sb" />
+          </AssociationSet>
+          <AssociationSet Name="FK_s_profile_user_details" Association="Self.FK_s_profile_user_details">
+            <End Role="user_details" EntitySet="user_details" />
+            <End Role="s_profile" EntitySet="s_profile" />
+          </AssociationSet>
+          <AssociationSet Name="FK_t_profile_user_details" Association="Self.FK_t_profile_user_details">
+            <End Role="user_details" EntitySet="user_details" />
+            <End Role="t_profile" EntitySet="t_profile" />
+          </AssociationSet>
+        </EntityContainer>
+      </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+      <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+        <EntityContainerMapping StorageEntityContainer="FINALModelStoreContainer" CdmEntityContainer="FINALEntities">
+          <EntitySetMapping Name="a_profile">
+            <EntityTypeMapping TypeName="FINALModel.a_profile">
+              <MappingFragment StoreEntitySet="a_profile">
+                <ScalarProperty Name="id" ColumnName="id" />
+                <ScalarProperty Name="a_id" ColumnName="a_id" />
+                <ScalarProperty Name="a_name" ColumnName="a_name" />
+                <ScalarProperty Name="a_address" ColumnName="a_address" />
+                <ScalarProperty Name="a_img" ColumnName="a_img" />
+                <ScalarProperty Name="a_email" ColumnName="a_email" />
+                <ScalarProperty Name="a_num" ColumnName="a_num" />
+                <ScalarProperty Name="country" ColumnName="country" />
+                <ScalarProperty Name="gender" ColumnName="gender" />
+                <ScalarProperty Name="dob" ColumnName="dob" />
+                <ScalarProperty Name="a_address1" ColumnName="a_address1" />
+                <ScalarProperty Name="zip" ColumnName="zip" />
+                <ScalarProperty Name="fb_url" ColumnName="fb_url" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="adv_details">
+            <EntityTypeMapping TypeName="FINALModel.adv_details">
+              <MappingFragment StoreEntitySet="adv_details">
+                <ScalarProperty Name="user_id" ColumnName="user_id" />
+                <ScalarProperty Name="details" ColumnName="details" />
+                <ScalarProperty Name="img" ColumnName="img" />
+                <ScalarProperty Name="price" ColumnName="price" />
+                <ScalarProperty Name="area" ColumnName="area" />
+                <ScalarProperty Name="country" ColumnName="country" />
+                <ScalarProperty Name="id" ColumnName="id" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="b_profile">
+            <EntityTypeMapping TypeName="FINALModel.b_profile">
+              <MappingFragment StoreEntitySet="b_profile">
+                <ScalarProperty Name="id" ColumnName="id" />
+                <ScalarProperty Name="b_id" ColumnName="b_id" />
+                <ScalarProperty Name="b_name" ColumnName="b_name" />
+                <ScalarProperty Name="b_address" ColumnName="b_address" />
+                <ScalarProperty Name="b_img" ColumnName="b_img" />
+                <ScalarProperty Name="b_email" ColumnName="b_email" />
+                <ScalarProperty Name="b_num" ColumnName="b_num" />
+                <ScalarProperty Name="country" ColumnName="country" />
+                <ScalarProperty Name="gender" ColumnName="gender" />
+                <ScalarProperty Name="dob" ColumnName="dob" />
+                <ScalarProperty Name="a_address1" ColumnName="a_address1" />
+                <ScalarProperty Name="zip" ColumnName="zip" />
+                <ScalarProperty Name="fb_url" ColumnName="fb_url" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="blogs">
+            <EntityTypeMapping TypeName="FINALModel.blog">
+              <MappingFragment StoreEntitySet="blog">
+                <ScalarProperty Name="id" ColumnName="id" />
+                <ScalarProperty Name="a_id" ColumnName="a_id" />
+                <ScalarProperty Name="img" ColumnName="img" />
+                <ScalarProperty Name="title" ColumnName="title" />
+                <ScalarProperty Name="date" ColumnName="date" />
+                <ScalarProperty Name="details" ColumnName="details" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="c_rating">
+            <EntityTypeMapping TypeName="FINALModel.c_rating">
+              <MappingFragment StoreEntitySet="c_rating">
+                <ScalarProperty Name="id" ColumnName="id" />
+                <ScalarProperty Name="ap_id" ColumnName="ap_id" />
+                <ScalarProperty Name="comment" ColumnName="comment" />
+                <ScalarProperty Name="rating" ColumnName="rating" />
+                <ScalarProperty Name="b_name" ColumnName="b_name" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="complains">
+            <EntityTypeMapping TypeName="FINALModel.complain">
+              <MappingFragment StoreEntitySet="complain">
+                <ScalarProperty Name="c_subject" ColumnName="c_subject" />
+                <ScalarProperty Name="c_type" ColumnName="c_type" />
+                <ScalarProperty Name="ctg" ColumnName="ctg" />
+                <ScalarProperty Name="c_details" ColumnName="c_details" />
+                <ScalarProperty Name="c_id" ColumnName="c_id" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="s_appartment_details">
+            <EntityTypeMapping TypeName="FINALModel.s_appartment_details">
+              <MappingFragment StoreEntitySet="s_appartment_details">
+                <ScalarProperty Name="id" ColumnName="id" />
+                <ScalarProperty Name="a_size" ColumnName="a_size" />
+                <ScalarProperty Name="s_id" ColumnName="s_id" />
+                <ScalarProperty Name="s_name" ColumnName="s_name" />
+                <ScalarProperty Name="location" ColumnName="location" />
+                <ScalarProperty Name="s_nid" ColumnName="s_nid" />
+                <ScalarProperty Name="s_email" ColumnName="s_email" />
+                <ScalarProperty Name="s_num" ColumnName="s_num" />
+                <ScalarProperty Name="s_address" ColumnName="s_address" />
+                <ScalarProperty Name="h_register_n" ColumnName="h_register_n" />
+                <ScalarProperty Name="price" ColumnName="price" />
+                <ScalarProperty Name="a_id" ColumnName="a_id" />
+                <ScalarProperty Name="img" ColumnName="img" />
+                <ScalarProperty Name="bed" ColumnName="bed" />
+                <ScalarProperty Name="bath" ColumnName="bath" />
+                <ScalarProperty Name="country" ColumnName="country" />
+                <ScalarProperty Name="a_title" ColumnName="a_title" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="s_profile">
+            <EntityTypeMapping TypeName="FINALModel.s_profile">
+              <MappingFragment StoreEntitySet="s_profile">
+                <ScalarProperty Name="id" ColumnName="id" />
+                <ScalarProperty Name="s_id" ColumnName="s_id" />
+                <ScalarProperty Name="s_name" ColumnName="s_name" />
+                <ScalarProperty Name="s_address" ColumnName="s_address" />
+                <ScalarProperty Name="s_img" ColumnName="s_img" />
+                <ScalarProperty Name="s_email" ColumnName="s_email" />
+                <ScalarProperty Name="s_num" ColumnName="s_num" />
+                <ScalarProperty Name="country" ColumnName="country" />
+                <ScalarProperty Name="gender" ColumnName="gender" />
+                <ScalarProperty Name="dob" ColumnName="dob" />
+                <ScalarProperty Name="a_address1" ColumnName="a_address1" />
+                <ScalarProperty Name="zip" ColumnName="zip" />
+                <ScalarProperty Name="fb_url" ColumnName="fb_url" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="t_profile">
+            <EntityTypeMapping TypeName="FINALModel.t_profile">
+              <MappingFragment StoreEntitySet="t_profile">
+                <ScalarProperty Name="id" ColumnName="id" />
+                <ScalarProperty Name="t_id" ColumnName="t_id" />
+                <ScalarProperty Name="t_name" ColumnName="t_name" />
+                <ScalarProperty Name="t_address" ColumnName="t_address" />
+                <ScalarProperty Name="t_email" ColumnName="t_email" />
+                <ScalarProperty Name="t_img" ColumnName="t_img" />
+                <ScalarProperty Name="t_num" ColumnName="t_num" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="trans_details_sb">
+            <EntityTypeMapping TypeName="FINALModel.trans_details_sb">
+              <MappingFragment StoreEntitySet="trans_details_sb">
+                <ScalarProperty Name="id" ColumnName="id" />
+                <ScalarProperty Name="s_id" ColumnName="s_id" />
+                <ScalarProperty Name="ap_id" ColumnName="ap_id" />
+                <ScalarProperty Name="b_id" ColumnName="b_id" />
+                <ScalarProperty Name="amount" ColumnName="amount" />
+                <ScalarProperty Name="t_id" ColumnName="t_id" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="user_details">
+            <EntityTypeMapping TypeName="FINALModel.user_details">
+              <MappingFragment StoreEntitySet="user_details">
+                <ScalarProperty Name="id" ColumnName="id" />
+                <ScalarProperty Name="name" ColumnName="name" />
+                <ScalarProperty Name="email" ColumnName="email" />
+                <ScalarProperty Name="user_id" ColumnName="user_id" />
+                <ScalarProperty Name="password" ColumnName="password" />
+                <ScalarProperty Name="rules" ColumnName="rules" />
+                <ScalarProperty Name="status" ColumnName="status" />
+                <ScalarProperty Name="img" ColumnName="img" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+        </EntityContainerMapping>
+      </Mapping>
+    </edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </Connection>
+    <Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="true" />
+        <DesignerProperty Name="IncludeForeignKeysInModel" Value="true" />
+        <DesignerProperty Name="UseLegacyProvider" Value="true" />
+        <DesignerProperty Name="CodeGenerationStrategy" Value="None" />
+      </DesignerInfoPropertySet>
+    </Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <Diagrams></Diagrams>
+  </Designer>
+</edmx:Edmx>

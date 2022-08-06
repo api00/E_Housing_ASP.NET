@@ -1,0 +1,171 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="FINALModelStoreContainer" CdmEntityContainer="FINALEntities">
+    <EntitySetMapping Name="a_profile">
+      <EntityTypeMapping TypeName="FINALModel.a_profile">
+        <MappingFragment StoreEntitySet="a_profile">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="a_id" ColumnName="a_id" />
+          <ScalarProperty Name="a_name" ColumnName="a_name" />
+          <ScalarProperty Name="a_address" ColumnName="a_address" />
+          <ScalarProperty Name="a_img" ColumnName="a_img" />
+          <ScalarProperty Name="a_email" ColumnName="a_email" />
+          <ScalarProperty Name="a_num" ColumnName="a_num" />
+          <ScalarProperty Name="country" ColumnName="country" />
+          <ScalarProperty Name="gender" ColumnName="gender" />
+          <ScalarProperty Name="dob" ColumnName="dob" />
+          <ScalarProperty Name="a_address1" ColumnName="a_address1" />
+          <ScalarProperty Name="zip" ColumnName="zip" />
+          <ScalarProperty Name="fb_url" ColumnName="fb_url" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="adv_details">
+      <EntityTypeMapping TypeName="FINALModel.adv_details">
+        <MappingFragment StoreEntitySet="adv_details">
+          <ScalarProperty Name="user_id" ColumnName="user_id" />
+          <ScalarProperty Name="details" ColumnName="details" />
+          <ScalarProperty Name="img" ColumnName="img" />
+          <ScalarProperty Name="price" ColumnName="price" />
+          <ScalarProperty Name="area" ColumnName="area" />
+          <ScalarProperty Name="country" ColumnName="country" />
+          <ScalarProperty Name="id" ColumnName="id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="b_profile">
+      <EntityTypeMapping TypeName="FINALModel.b_profile">
+        <MappingFragment StoreEntitySet="b_profile">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="b_id" ColumnName="b_id" />
+          <ScalarProperty Name="b_name" ColumnName="b_name" />
+          <ScalarProperty Name="b_address" ColumnName="b_address" />
+          <ScalarProperty Name="b_img" ColumnName="b_img" />
+          <ScalarProperty Name="b_email" ColumnName="b_email" />
+          <ScalarProperty Name="b_num" ColumnName="b_num" />
+          <ScalarProperty Name="country" ColumnName="country" />
+          <ScalarProperty Name="gender" ColumnName="gender" />
+          <ScalarProperty Name="dob" ColumnName="dob" />
+          <ScalarProperty Name="a_address1" ColumnName="a_address1" />
+          <ScalarProperty Name="zip" ColumnName="zip" />
+          <ScalarProperty Name="fb_url" ColumnName="fb_url" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="blogs">
+      <EntityTypeMapping TypeName="FINALModel.blog">
+        <MappingFragment StoreEntitySet="blog">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="a_id" ColumnName="a_id" />
+          <ScalarProperty Name="img" ColumnName="img" />
+          <ScalarProperty Name="title" ColumnName="title" />
+          <ScalarProperty Name="date" ColumnName="date" />
+          <ScalarProperty Name="details" ColumnName="details" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="c_rating">
+      <EntityTypeMapping TypeName="FINALModel.c_rating">
+        <MappingFragment StoreEntitySet="c_rating">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="ap_id" ColumnName="ap_id" />
+          <ScalarProperty Name="comment" ColumnName="comment" />
+          <ScalarProperty Name="rating" ColumnName="rating" />
+          <ScalarProperty Name="b_name" ColumnName="b_name" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="complains">
+      <EntityTypeMapping TypeName="FINALModel.complain">
+        <MappingFragment StoreEntitySet="complain">
+          <ScalarProperty Name="c_subject" ColumnName="c_subject" />
+          <ScalarProperty Name="c_type" ColumnName="c_type" />
+          <ScalarProperty Name="ctg" ColumnName="ctg" />
+          <ScalarProperty Name="c_details" ColumnName="c_details" />
+          <ScalarProperty Name="c_id" ColumnName="c_id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="s_appartment_details">
+      <EntityTypeMapping TypeName="FINALModel.s_appartment_details">
+        <MappingFragment StoreEntitySet="s_appartment_details">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="a_size" ColumnName="a_size" />
+          <ScalarProperty Name="s_id" ColumnName="s_id" />
+          <ScalarProperty Name="s_name" ColumnName="s_name" />
+          <ScalarProperty Name="location" ColumnName="location" />
+          <ScalarProperty Name="s_nid" ColumnName="s_nid" />
+          <ScalarProperty Name="s_email" ColumnName="s_email" />
+          <ScalarProperty Name="s_num" ColumnName="s_num" />
+          <ScalarProperty Name="s_address" ColumnName="s_address" />
+          <ScalarProperty Name="h_register_n" ColumnName="h_register_n" />
+          <ScalarProperty Name="price" ColumnName="price" />
+          <ScalarProperty Name="a_id" ColumnName="a_id" />
+          <ScalarProperty Name="img" ColumnName="img" />
+          <ScalarProperty Name="bed" ColumnName="bed" />
+          <ScalarProperty Name="bath" ColumnName="bath" />
+          <ScalarProperty Name="country" ColumnName="country" />
+          <ScalarProperty Name="a_title" ColumnName="a_title" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="s_profile">
+      <EntityTypeMapping TypeName="FINALModel.s_profile">
+        <MappingFragment StoreEntitySet="s_profile">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="s_id" ColumnName="s_id" />
+          <ScalarProperty Name="s_name" ColumnName="s_name" />
+          <ScalarProperty Name="s_address" ColumnName="s_address" />
+          <ScalarProperty Name="s_img" ColumnName="s_img" />
+          <ScalarProperty Name="s_email" ColumnName="s_email" />
+          <ScalarProperty Name="s_num" ColumnName="s_num" />
+          <ScalarProperty Name="country" ColumnName="country" />
+          <ScalarProperty Name="gender" ColumnName="gender" />
+          <ScalarProperty Name="dob" ColumnName="dob" />
+          <ScalarProperty Name="a_address1" ColumnName="a_address1" />
+          <ScalarProperty Name="zip" ColumnName="zip" />
+          <ScalarProperty Name="fb_url" ColumnName="fb_url" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="t_profile">
+      <EntityTypeMapping TypeName="FINALModel.t_profile">
+        <MappingFragment StoreEntitySet="t_profile">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="t_id" ColumnName="t_id" />
+          <ScalarProperty Name="t_name" ColumnName="t_name" />
+          <ScalarProperty Name="t_address" ColumnName="t_address" />
+          <ScalarProperty Name="t_email" ColumnName="t_email" />
+          <ScalarProperty Name="t_img" ColumnName="t_img" />
+          <ScalarProperty Name="t_num" ColumnName="t_num" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="trans_details_sb">
+      <EntityTypeMapping TypeName="FINALModel.trans_details_sb">
+        <MappingFragment StoreEntitySet="trans_details_sb">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="s_id" ColumnName="s_id" />
+          <ScalarProperty Name="ap_id" ColumnName="ap_id" />
+          <ScalarProperty Name="b_id" ColumnName="b_id" />
+          <ScalarProperty Name="amount" ColumnName="amount" />
+          <ScalarProperty Name="t_id" ColumnName="t_id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="user_details">
+      <EntityTypeMapping TypeName="FINALModel.user_details">
+        <MappingFragment StoreEntitySet="user_details">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="name" ColumnName="name" />
+          <ScalarProperty Name="email" ColumnName="email" />
+          <ScalarProperty Name="user_id" ColumnName="user_id" />
+          <ScalarProperty Name="password" ColumnName="password" />
+          <ScalarProperty Name="rules" ColumnName="rules" />
+          <ScalarProperty Name="status" ColumnName="status" />
+          <ScalarProperty Name="img" ColumnName="img" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>
