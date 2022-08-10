@@ -1,5 +1,5 @@
-﻿using BLL.Bos;
-using BLL.Services;
+﻿using BLL.Bos.SellerBos;
+using BLL.Services.Seller_Services;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -7,41 +7,42 @@ using System.Net;
 using System.Net.Http;
 using System.Web.Http;
 
-namespace FINAL.Controllers
+namespace FINAL.Controllers.Seller_controllers
 {
-    public class UserDetailController : ApiController
+    public class AppDetailsController : ApiController
     {
-        [Route("api/user")]
+
+        [Route("api/Appartments")]
         [HttpGet]
         public HttpResponseMessage Get()
         {
-            var data = UserServices.Get();
+            var data = App_Services.Get();
             return Request.CreateResponse(HttpStatusCode.OK, data);
 
         }
-        [Route("api/user/create")]
+        [Route("api/Appartment/create")]
         [HttpPost]
-        public HttpResponseMessage Create(UserDetailModel st)
+        public HttpResponseMessage Create(App_DetilModel st)
         {
-            var data = UserServices.Create(st);
+            var data = App_Services.Create(st);
             return Request.CreateResponse(HttpStatusCode.OK, "CREATED");
         }
-        [Route("api/user/Get/{id}")]
+        [Route("api/Appartment/Get/{id}")]
         [HttpGet]
         public HttpResponseMessage Get(int id)
         {
-           
-            var data = UserServices.GetUser(id);
+
+
+            var data = App_Services.GetBlog(id);
             return Request.CreateResponse(HttpStatusCode.OK, data);
         }
-        [Route("api/user/{id}")]
+        [Route("api/Appartment/delete/{id}")]
         [HttpGet]
         public HttpResponseMessage Delete(int id)
         {
 
-            var data = UserServices.Delete(id);
+            var data = App_Services.Delete(id);
             return Request.CreateResponse(HttpStatusCode.OK, "DELETED");
         }
-
     }
 }

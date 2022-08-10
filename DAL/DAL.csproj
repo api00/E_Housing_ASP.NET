@@ -48,7 +48,6 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Class1.cs" />
     <Compile Include="DataAccessFactory.cs" />
     <Compile Include="EF\adv_details.cs">
       <DependentUpon>FINAL.tt</DependentUpon>
@@ -100,6 +99,9 @@
     </Compile>
     <Compile Include="interfaces\IRepo.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Repos\Admin_Repos\BlogRepo.cs" />
+    <Compile Include="Repos\Buyer_Repos\Complain.cs" />
+    <Compile Include="Repos\Seller_Repos\App_Details.cs" />
     <Compile Include="Repos\UserRepo.cs" />
   </ItemGroup>
   <ItemGroup>

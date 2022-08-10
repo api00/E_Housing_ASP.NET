@@ -9,39 +9,48 @@ using System.Web.Http;
 
 namespace FINAL.Controllers
 {
-    public class UserDetailController : ApiController
+    public class BlogController : ApiController
     {
-        [Route("api/user")]
+        [Route("api/blogs")]
         [HttpGet]
         public HttpResponseMessage Get()
         {
-            var data = UserServices.Get();
+            var data = BlogServices.Get();
             return Request.CreateResponse(HttpStatusCode.OK, data);
 
         }
-        [Route("api/user/create")]
+        [Route("api/blog/create")]
         [HttpPost]
-        public HttpResponseMessage Create(UserDetailModel st)
+        public HttpResponseMessage Create(BlogModel st)
         {
-            var data = UserServices.Create(st);
+            var data = BlogServices.Create(st);
             return Request.CreateResponse(HttpStatusCode.OK, "CREATED");
         }
-        [Route("api/user/Get/{id}")]
+        [Route("api/blog/Get/{id}")]
         [HttpGet]
         public HttpResponseMessage Get(int id)
         {
-           
-            var data = UserServices.GetUser(id);
+
+            
+            var data = BlogServices.GetBlog(id);
             return Request.CreateResponse(HttpStatusCode.OK, data);
         }
-        [Route("api/user/{id}")]
+        [Route("api/blog/delete/{id}")]
         [HttpGet]
         public HttpResponseMessage Delete(int id)
         {
 
-            var data = UserServices.Delete(id);
+            var data = BlogServices.Delete(id);
             return Request.CreateResponse(HttpStatusCode.OK, "DELETED");
         }
+        [Route("api/blog/update/{id}")]
+        [HttpPost]
+        public HttpResponseMessage update(BlogModel st)
+        {
+            var data = BlogServices.Update(st);
+            return Request.CreateResponse(HttpStatusCode.OK, "CREATED");
+        }
+
 
     }
 }

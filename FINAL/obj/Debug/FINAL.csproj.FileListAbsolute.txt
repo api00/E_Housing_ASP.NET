@@ -1,3 +1,4 @@
+D:\.NET\FINAL\FINAL\obj\Debug\FINAL.csproj.CoreCompileInputs.cache
 D:\.NET\FINAL\FINAL\bin\FINAL.dll.config
 D:\.NET\FINAL\FINAL\bin\FINAL.dll
 D:\.NET\FINAL\FINAL\bin\FINAL.pdb
@@ -68,7 +69,6 @@ D:\.NET\FINAL\FINAL\bin\DAL.pdb
 D:\.NET\FINAL\FINAL\bin\DAL.dll.config
 D:\.NET\FINAL\FINAL\bin\EntityFramework.xml
 D:\.NET\FINAL\FINAL\obj\Debug\FINAL.csproj.AssemblyReference.cache
-D:\.NET\FINAL\FINAL\obj\Debug\FINAL.csproj.CoreCompileInputs.cache
 D:\.NET\FINAL\FINAL\obj\Debug\FINAL.csproj.CopyComplete
 D:\.NET\FINAL\FINAL\obj\Debug\FINAL.dll
 D:\.NET\FINAL\FINAL\obj\Debug\FINAL.pdb

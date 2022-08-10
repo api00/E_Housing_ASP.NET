@@ -19,6 +19,7 @@ namespace BLL.Services
             {
                 rdata.Add(new UserDetailModel()
                 {
+                    id = item.id,
                     name = item.name,
                     email = item.email,
                     user_id = item.user_id,
@@ -45,7 +46,7 @@ namespace BLL.Services
         {
             var student = new user_details()
             {
-                //id = item.id,
+                id = item.id,
                 name = item.name,
                 email = item.email,
                 user_id = item.user_id,

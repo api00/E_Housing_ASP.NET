@@ -41,9 +41,15 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Bos\AdminBos\BlogModel.cs" />
+    <Compile Include="Bos\BuyerBos\ComplainModel.cs" />
+    <Compile Include="Bos\SellerBos\App_DetilModel.cs" />
     <Compile Include="Bos\UserDetailModel.cs" />
     <Compile Include="Class1.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Services\Admin_Services\BlogServices.cs" />
+    <Compile Include="Services\Buyer_Services\ComplainService.cs" />
+    <Compile Include="Services\Seller_Services\App_Services.cs" />
     <Compile Include="Services\UserServices.cs" />
   </ItemGroup>
   <ItemGroup>

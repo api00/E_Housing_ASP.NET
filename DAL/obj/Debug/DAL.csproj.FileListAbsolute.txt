@@ -3,7 +3,6 @@ D:\.NET\FINAL\DAL\bin\Debug\DAL.dll
 D:\.NET\FINAL\DAL\bin\Debug\DAL.pdb
 D:\.NET\FINAL\DAL\bin\Debug\EntityFramework.dll
 D:\.NET\FINAL\DAL\bin\Debug\EntityFramework.xml
-D:\.NET\FINAL\DAL\obj\Debug\DAL.csproj.AssemblyReference.cache
 D:\.NET\FINAL\DAL\obj\Debug\DAL.csproj.CoreCompileInputs.cache
 D:\.NET\FINAL\DAL\obj\Debug\DAL.csproj.CopyComplete
 D:\.NET\FINAL\DAL\obj\Debug\DAL.dll
